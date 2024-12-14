@@ -219,7 +219,7 @@ export default {
      */
     handleTabClick(tab, updateUri = true, refreshCodeMirror = true) {
       this.selectedTab = tab
-
+      tab.init = true;
       Nova.$emit('nova-tabs-changed', this.getTabsReference(), tab)
 
       if (updateUri) {
